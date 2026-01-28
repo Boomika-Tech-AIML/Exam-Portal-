@@ -8,10 +8,20 @@
 
 <h2>Admin Dashboard</h2>
 
-<p>Exam: Python Basics</p>
-<p>Status: Active</p>
+<table border="1" style="margin:auto">
+<tr>
+    <th>ID</th>
+    <th>Score</th>
+</tr>
 
-<p>(Results will appear here when DB is added)</p>
+{% for row in data %}
+<tr>
+    <td>{{ row[0] }}</td>
+    <td>{{ row[1] }}</td>
+</tr>
+{% endfor %}
+
+</table>
 
 <br>
 <a href="/">Logout</a>
