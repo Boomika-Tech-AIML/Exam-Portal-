@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="login-body">
+
+<div class="login-card-split">
+
+<!-- LEFT -->
+<div class="login-left">
+
+<h2>Login</h2>
+<p class="sub">Secure AI-Protected Online Examination Portal</p>
+
+<form method="post" action="/login">
+
+<input name="username" placeholder="Username" required>
+<input name="password" type="password" placeholder="Password" required>
+
+<div class="login-row">
+<label><input type="checkbox"> Remember Me</label>
+<span class="link">Forgot password?</span>
+</div>
+
+<button class="login-btn">LOGIN</button>
+
+</form>
+
+</div>
+
+<!-- RIGHT -->
+<div class="login-right">
+<div class="welcome">
+Welcome Back
+<p>Focused • Secure • Proctored</p>
+</div>
+</div>
+
+</div>
+
+</body>
+</html>

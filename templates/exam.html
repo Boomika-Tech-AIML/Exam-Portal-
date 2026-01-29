@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exam</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<script>
+
+const questions = [
+{
+q: "Which firewall layer inspects the Handshake?",
+opts: ["Application","Stateful","Packet Filter","Physical"]
+},
+{
+q: "What port does HTTPS use?",
+opts: ["80","21","443","25"]
+},
+{
+q: "What does WAF prevent?",
+opts: ["SQL Injection","Hardware Theft","Screen Damage","Cable Fault"]
+}
+];
+
+let i = 0;
+let answers = {};
+
+function loadQ(){
+document.getElementById("qtext").innerText = questions[i].q;
+
+let box = document.getElementById("opts");
+box.innerHTML = "";
+
+questions[i].opts.forEach((o,idx)=>{
+box.innerHTML += `
+<label class="opt">
+<input type="radio" name="q" value="${idx}"
+${answers[i]==idx?"checked":""}
+onchange="answers[${i}]=${idx}">
+${o}
+</label>`;
+});
+
+document.getElementById("tracker").innerText =
+`Question ${i+1} of ${questions.length}`;
+}
+
+function nextQ(){
+if(i < questions.length-1){ i++; loadQ(); }
+}
+
+function prevQ(){
+if(i > 0){ i--; loadQ(); }
+}
+
+window.onload = loadQ;
+
+</script>
+</head>
+
+<body class="exam-body">
+
+<div class="exam-header">
+<div>Protocol Analysis 101</div>
+<div id="tracker"></div>
+<div id="timer" class="timer">Demo Mode</div>
+</div>
+
+<div class="exam-main">
+
+<div id="qtext" class="question-box"></div>
+
+<div id="opts"></div>
+
+<div class="nav-footer">
+<button type="button" class="btn-ghost" onclick="prevQ()">Previous</button>
+<button type="button" class="btn-primary" onclick="nextQ()">Next</button>
+
+<form method="post" action="/submit_exam" style="display:inline">
+<button class="btn-success">Submit</button>
+</form>
+</div>
+
+</div>
+
+</body>
+</html>

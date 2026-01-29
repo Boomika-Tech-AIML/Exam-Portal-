@@ -1,0 +1,331 @@
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Segoe UI,Arial}
+
+/* ================= LOGIN ================= */
+
+.login-body{
+    height:100vh;
+    background:#e5e7eb;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.login-card-split{
+    width:900px;
+    height:520px;
+    background:white;
+    border-radius:12px;
+    display:flex;
+    overflow:hidden;
+    box-shadow:0 30px 60px rgba(0,0,0,.15);
+}
+
+.login-left{
+    width:55%;
+    padding:50px;
+}
+
+.login-left h2{margin:0;font-size:28px}
+
+.sub{color:#6b7280;margin-bottom:20px}
+
+.login-left input{
+    width:100%;
+    padding:14px;
+    margin-top:14px;
+    border-radius:8px;
+    border:1px solid #d1d5db;
+}
+
+.login-row{
+    display:flex;
+    justify-content:space-between;
+    font-size:14px;
+    margin:14px 0;
+}
+
+.login-btn{
+    background:linear-gradient(45deg,#7c3aed,#4f46e5);
+    color:white;
+    border:none;
+    padding:12px 26px;
+    border-radius:24px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.login-right{
+    width:45%;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#7c3aed,#2563eb,#38bdf8);
+    clip-path:polygon(15% 0,100% 0,100% 100%,0 100%);
+}
+
+.welcome{
+    font-size:34px;
+    font-weight:700;
+    text-align:center;
+}
+
+/* ================= COMMON ================= */
+
+.header{
+    background:#1e3a8a;
+    color:white;
+    padding:16px;
+    font-size:20px;
+}
+
+.btn-primary{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 16px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.btn-ghost{
+    background:white;
+    border:2px solid #cbd5e1;
+    padding:12px 16px;
+    border-radius:8px;
+}
+
+.btn-success{
+    background:#22c55e;
+    color:white;
+    border:none;
+    padding:12px 16px;
+    border-radius:8px;
+}
+
+/* ================= STUDENT DASHBOARD ================= */
+
+.dash-grid{
+    display:grid;
+    grid-template-columns:3fr 1fr;
+    gap:24px;
+    padding:24px;
+}
+
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+
+.card{
+    background:white;
+    padding:18px;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,.06);
+}
+
+.k{color:#64748b;font-size:14px}
+.v{font-size:26px;font-weight:700}
+
+.progress{
+    height:10px;
+    background:#e2e8f0;
+    border-radius:6px;
+}
+
+.bar{
+    height:100%;
+    background:#2563eb;
+    border-radius:6px;
+}
+
+.module-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+    margin-top:16px;
+}
+
+.module-card{
+    background:white;
+    padding:18px;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,.06);
+}
+
+.right-panel{
+    background:#f1f5f9;
+    padding:18px;
+    border-radius:12px;
+}
+
+.side-box{
+    background:white;
+    padding:12px;
+    border-radius:10px;
+    margin-top:12px;
+}
+
+/* ================= MODAL ================= */
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.6);
+    display:none;
+    align-items:center;
+    justify-content:center;
+}
+
+.modal-box{
+    background:white;
+    padding:24px;
+    border-radius:12px;
+    width:420px;
+}
+
+/* ================= EXAM ================= */
+
+.exam-body{background:#f8fafc}
+
+.exam-header{
+    display:flex;
+    justify-content:space-between;
+    background:white;
+    padding:16px;
+    border-bottom:1px solid #e5e7eb;
+}
+
+.exam-main{padding:24px}
+
+.timer{
+    font-weight:700;
+    color:#1e3a8a;
+}
+
+.timer.danger{color:red}
+
+.question-box{
+    background:white;
+    padding:24px;
+    border-radius:12px;
+    font-size:18px;
+}
+
+.opt{
+    display:block;
+    border:2px solid #e5e7eb;
+    padding:14px;
+    border-radius:10px;
+    margin-top:10px;
+    cursor:pointer;
+}
+
+.opt:hover{
+    background:#eff6ff;
+    border-color:#60a5fa;
+}
+
+.nav-footer{
+    margin-top:20px;
+    display:flex;
+    gap:12px;
+}
+
+/* ================= RESULT ================= */
+
+.result-body{
+    display:flex;
+    min-height:100vh;
+    background:#0f172a;
+    color:white;
+}
+
+.result-center{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.result-side{
+    width:40%;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+}
+
+.gauge{
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    border:12px solid #1f2937;
+    border-top:12px solid #38bdf8;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:32px;
+    font-weight:700;
+}
+
+.badge{
+    background:#0ea5e9;
+    padding:10px 18px;
+    border-radius:20px;
+    margin-top:14px;
+}
+
+.chip-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    margin-top:20px;
+}
+
+.chip{
+    background:#1f2937;
+    padding:14px;
+    border-radius:10px;
+}
+
+/* ================= ADMIN SOC ================= */
+
+.admin-body{
+    background:#0f172a;
+    color:#e5e7eb;
+}
+
+.admin-layout{
+    display:flex;
+}
+
+.admin-sidebar{
+    width:220px;
+    background:#020617;
+    padding:20px;
+}
+
+.admin-main{
+    flex:1;
+    padding:24px;
+}
+
+.admin-card{
+    background:#020617;
+    border:1px solid #1f2937;
+    padding:18px;
+    border-radius:12px;
+}
+
+.alert{color:#ef4444}
+
+.console{
+    background:black;
+    color:#22c55e;
+    font-family:monospace;
+    padding:16px;
+    border-radius:10px;
+    height:220px;
+    overflow:auto;
+}

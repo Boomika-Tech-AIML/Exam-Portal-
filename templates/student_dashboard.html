@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Dashboard</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<script>
+function openRules(){
+ document.getElementById("rulesModal").style.display="flex";
+}
+function closeRules(){
+ document.getElementById("rulesModal").style.display="none";
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="header">Welcome Student — Dashboard</div>
+
+<div class="dash-grid">
+
+<!-- LEFT MAIN -->
+
+<div>
+
+<h3>Performance Snapshot</h3>
+
+<div class="card-grid">
+
+<div class="card"><div class="k">Total Tests Attempted</div><div class="v">12</div></div>
+<div class="card"><div class="k">Best Score</div><div class="v">94%</div></div>
+<div class="card"><div class="k">Average Score</div><div class="v">78%</div></div>
+<div class="card">
+<div class="k">Overall Progress</div>
+<div class="progress"><div class="bar" style="width:60%"></div></div>
+</div>
+
+</div>
+
+<h3>Active MCQ Modules</h3>
+
+<div class="module-grid">
+
+<div class="module-card">
+<h4>Packet Filtering Basics</h4>
+<p>Questions: 25</p>
+<p>Duration: 30 mins</p>
+<p>Difficulty: Medium</p>
+<p>Attempts Used: 1 / 2</p>
+<button class="btn-primary" onclick="openRules()">Start Test</button>
+</div>
+
+</div>
+
+</div>
+
+<!-- RIGHT SIDEBAR -->
+
+<div class="right-panel">
+
+<h4>What’s Next</h4>
+
+<div class="side-box">
+<b>Upcoming Tests</b>
+<p>Advanced NAT — Opens Feb 5</p>
+</div>
+
+<div class="side-box">
+<b>Recent Activity</b>
+<p>Firewall Basics — 92%</p>
+<p>NAT — 88%</p>
+<p>WAF — 95%</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- RULES MODAL -->
+
+<div id="rulesModal" class="modal">
+<div class="modal-box">
+<h3>🛡 Test Guidelines & Protocol</h3>
+<ul>
+<li>Auto submit when timer ends</li>
+<li>No refresh / tab switching</li>
+<li>Equal marks</li>
+<li>No negative marking</li>
+<li>Attempt counted once started</li>
+</ul>
+
+<label><input type="checkbox"> I agree</label><br><br>
+<a href="/exam" class="btn-primary">Proceed to Test</a>
+<button onclick="closeRules()" class="btn-ghost">Cancel</button>
+</div>
+</div>
+
+</body>
+</html>
