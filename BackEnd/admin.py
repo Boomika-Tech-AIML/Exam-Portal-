@@ -40,9 +40,9 @@ def login():
                 ADMIN_LOGS.append("[SUCCESS] User verified")
                 return redirect(url_for("dashboard"))
         else:
-            return render_template("login.html", error="Invalid Credentials")
+            return render_template("template/login.html", error="Invalid Credentials")
 
-    return render_template("login.html")
+    return render_template("templates/login.html")
 
 
 # -------------------------
